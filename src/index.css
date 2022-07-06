@@ -1,13 +1,74 @@
-body {
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+ background: url('https://media.istockphoto.com/videos/colored-smoke-on-a-dark-background-blue-and-red-light-with-smoke-video-id1341408852?b=1&k=20&m=1341408852&s=640x640&h=C6ymXpr_Jn6-WqQmHHuS8z6TGBtkWDQ9x6tFs_hsBjs=');
+ background-repeat: no-repeat;
+ background-size: cover;
+ padding: 3rem;
+}
+.container{
+  width: 80vw;
+  min-height: 50vh;
+  margin: 0 auto;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+.mobile_size{
+  width: 280px;
+  height: 470px;
+  background: black;
+  position: relative;
+}
+.header{
+  background: #0fc;
+  padding: 10px 2px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* ! Footer  */
+.footer{
+
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: #0fc;
+  padding: 10px ;
+} 
+.footer button, .input_field button , .todo_items button{
+  background: none;
+  outline: none;
+  border: none;
+}
+
+/* ! addItems */
+.input_field{
+  border: 1px solid #0fc;
+  width: 90%;
+  padding: 4px;
+  margin: 10px auto;
+  border-radius: 6px;
+}
+.input_field input{
+  background: none;
+  outline: none;
+  border: none;
+  width: 90%;
+  color: #0fc;
+}
+
+/* ! todo items */
+.todo_items{
+  display: flex;
+  color: white;
+  width: 90%;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+.todo_items p{
+  margin-left: 5px;
 }

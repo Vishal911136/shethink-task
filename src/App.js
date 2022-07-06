@@ -1,24 +1,49 @@
-import logo from './logo.svg';
-import './App.css';
+import AddItem from "./Components/AddItem";
+import SearchItem from "./Components/SearchItem";
+import TodoList from "./Components/TodoList";
+import {Routes, Route, Link} from 'react-router-dom'
+import { useState } from "react";
+import {ImCross,ImPlus} from 'react-icons/im'
+
 
 function App() {
+
+  // component change
+  const [addCom,setSearch] = useState(false)
+  // button change
+  const [plus,setPlus] = useState(false)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+        <div className="container">
+            <div className="mobile_size">
+              <div className="header">
+                <h4>To Do List</h4>
+              </div>
+                {!addCom? <SearchItem/> : <AddItem/> }
+                <TodoList />
+                <Routes>
+                    <Route path="/Search" element={<SearchItem/>}/>
+                    <Route path="/Search" element={<AddItem/>}/>
+                </Routes>
+
+          <div className="footer">
+              <button>{!plus? <ImPlus
+                      onClick={()=>{
+                        setSearch(true)
+                        setPlus(true)
+                      }}
+                      />: <ImCross
+                      onClick={()=>{
+                        setSearch(false)
+                        setPlus(false)
+                        }}/>
+                      }
+              </button>
+          </div>
+            </div>
+        </div>
+    </>
   );
 }
 
