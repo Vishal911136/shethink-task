@@ -21,7 +21,7 @@ function App() {
                 <h4>To Do List</h4>
               </div>
                 {!addCom? <SearchItem/> : <AddItem/> }
-                <TodoList />
+                {/* <TodoList /> */}
                 <Routes>
                     <Route path="/Search" element={<SearchItem/>}/>
                     <Route path="/Search" element={<AddItem/>}/>
